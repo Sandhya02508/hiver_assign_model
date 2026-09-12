@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hiver Uber Support Agent
 
 An AI customer-support agent for the Uber brand built on customer support interaction patterns. The system performs intent classification, historical support retrieval, grounded reply generation, and automated risk/escalation decisions.
@@ -43,3 +44,6 @@ hiver-uber-support-agent/
    ```bash
    python run_pipeline.py
    ```
+=======
+# hiver_assign_model
+>>>>>>> db3fa7068fe1a076bde15c51b3b0881ee4b3c2aa
