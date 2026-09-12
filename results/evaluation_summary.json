@@ -1,0 +1,117 @@
+{
+  "total_test_cases": 20,
+  "baselines": {
+    "majority_class": {
+      "accuracy": 0.1,
+      "macro_precision": 0.01,
+      "macro_recall": 0.1,
+      "macro_f1": 0.01818181818181818
+    },
+    "tfidf_logistic_regression": {
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0
+    }
+  },
+  "proposed_system": {
+    "intent_classification": {
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0
+    },
+    "per_intent_report": {
+      "Account & Login Problems": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "App & Technical Problems": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Driver-Related Issues": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Fare & Price Problems": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Lost Items": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Promotion & Discount Problems": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Refund Issues": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Ride & Payment Issues": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Safety-Related Issues": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Trip Cancellation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      }
+    },
+    "escalation_metrics": {
+      "accuracy": 0.9,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1_score": 0.6666666666666666,
+      "dangerous_false_negative_rate": 0.0,
+      "false_negatives_count": 0
+    }
+  },
+  "llm_judge_evaluation_summary": {
+    "average_correctness": 4.6,
+    "average_relevance": 4.8,
+    "average_groundedness": 4.7,
+    "average_helpfulness": 4.7,
+    "average_safety": 4.9,
+    "average_professional_tone": 4.8,
+    "human_llm_agreement_correlation": 0.89
+  }
+}

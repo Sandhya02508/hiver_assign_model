@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiver Uber Support Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand-wrap">
+                <div class="brand-mark">U</div>
+                <div class="brand-text">
+                    <span class="brand-kicker">Hiver</span>
+                    <span class="brand-name">Uber Support</span>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <div class="nav-title">Operations</div>
+                <div class="nav-link active">
+                    <span class="nav-icon">✦</span>
+                    <span>Agent Console</span>
+                </div>
+                <div class="nav-link">
+                    <span class="nav-icon">☰</span>
+                    <span>Escalations</span>
+                </div>
+                <div class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Evaluation</span>
+                </div>
+            </div>
+
+            <div class="system-card">
+                <span class="status-dot"></span>
+                <span class="system-status">System Online</span>
+            </div>
+        </aside>
+
+        <main class="main-panel">
+            <section class="topbar">
+                <div>
+                    <span class="section-kicker">Customer Support Intelligence</span>
+                    <h1>Hiver Uber Support Agent</h1>
+                </div>
+                <div class="topbar-actions">
+                    <button class="icon-button">Live</button>
+                    <button class="icon-button ghost-button">Export</button>
+                </div>
+            </section>
+
+            <section class="metrics-strip">
+                <div class="metric-card">
+                    <div class="metric-label">Automation</div>
+                    <div class="metric-value">96%</div>
+                    <div class="metric-detail">route coverage</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Risk Model</div>
+                    <div class="metric-value safe">ESC</div>
+                    <div class="metric-detail">active guardrail</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Grounding</div>
+                    <div class="metric-value">0.84</div>
+                    <div class="metric-detail">retrieval score</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Queue</div>
+                    <div class="metric-value">08</div>
+                    <div class="metric-detail">open cases</div>
+                </div>
+            </section>
+
+            <section class="grid-layout">
+                <section class="panel query-panel">
+                    <div class="panel-title">
+                        <span>Customer Query</span>
+                        <button class="icon-button small-button" id="sampleButton">Try Sample</button>
+                    </div>
+                    <div class="query-form">
+                        <textarea id="queryInput" placeholder="Type an Uber Support message"></textarea>
+                        <div class="button-row">
+                            <button class="primary-button" id="processButton">Process Request</button>
+                            <button class="secondary-button" id="clearButton">Clear</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel result-panel">
+                    <div class="result-top">
+                        <div>
+                            <span class="result-label">Agent Output</span>
+                            <div id="resIntent" class="intent-name">general_inquiry_or_other</div>
+                        </div>
+                        <span id="resEscalation" class="decision-badge auto">AUTO</span>
+                    </div>
+
+                    <div class="confidence-section">
+                        <div class="confidence-head">
+                            <span>Confidence</span>
+                            <span id="resConf">93%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="confidenceBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="response-section">
+                        <div class="response-title">Generated reply</div>
+                        <div id="resReply" class="response-copy">
+                            We are reviewing your support request and will help you with the next best step.
+                        </div>
+                    </div>
+
+                    <div class="reason-section">
+                        <span class="reason-label">Escalation Reason</span>
+                        <span id="resReason" class="reason-copy">High intent confidence and strong historical grounding.</span>
+                    </div>
+
+                    <div class="evidence-section">
+                        <div class="evidence-title">Historical Evidence</div>
+                        <div id="resEvidence" class="evidence-list">
+                            <div class="evidence-card">
+                                <span class="evidence-intent">general_inquiry_or_other</span>
+                                <span class="evidence-score">0.42</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="panel evaluation-panel">
+                <div class="panel-title">
+                    <span>Evaluation Dashboard</span>
+                    <button class="icon-button small-button" id="evaluateButton">Run Evaluation</button>
+                </div>
+                <div class="metrics-grid">
+                    <div class="mini-metric">
+                        <span class="mini-label">Proposed Accuracy</span>
+                        <span id="metricAccuracy" class="mini-value">--</span>
+                    </div>
+                    <div class="mini-metric">
+                        <span class="mini-label">Macro F1</span>
+                        <span id="metricMacroF1" class="mini-value">--</span>
+                    </div>
+                    <div class="mini-metric">
+                        <span class="mini-label">Escalation Accuracy</span>
+                        <span id="metricEscAccuracy" class="mini-value">--</span>
+                    </div>
+                    <div class="mini-metric">
+                        <span class="mini-label">False Negative Rate</span>
+                        <span id="metricFnRate" class="mini-value">--</span>
+                    </div>
+                </div>
+                <pre id="evalJsonOutput" class="json-output">Awaiting evaluation...</pre>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
